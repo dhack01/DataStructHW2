@@ -14,8 +14,6 @@ int WFPTagCounts(string inp) {
 		else if (stack.IsEmpty() != 1 && ch == ']' || stack.IsEmpty() != 1 && ch == ')' || stack.IsEmpty() != 1 && ch == '>') {
 			temp = stack.Pop();
 			if (ch == ')' && temp != '(' || ch == ']' && temp != '[' || ch == '>' && temp != '<') {
-				cout << ch;
-				cout << temp;
 				return -1;
 			}
 			else if (ch == '>' && temp == '<') {
